@@ -1,6 +1,6 @@
 # Mary Karroqe
 # 07.04.17
-# Math Games: Triangular Numbers
+# Triangular Numbers
 
 # returns value of n-th triangular number
 def nth_tri_num(n):
