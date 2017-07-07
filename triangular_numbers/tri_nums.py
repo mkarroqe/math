@@ -12,8 +12,8 @@ def tri_num_series(n):
 		val = .5 * i * (i + 1)
 		print(int(val))
 
-# prints out visual of triangular number
-def print_tri_num(n):
+# prints out visual of triangular number, centered
+def print_tri_num_centered(n):
 	for i in range(n):
 		padding = n - i
 		num_nodes = i + 1
@@ -22,5 +22,26 @@ def print_tri_num(n):
 
 	print("\nTriangular number", n, "is", str(int(nth_tri_num(n))) + ".\n")
 
-print_tri_num(6)
+# prints out visual of triangular number, left-aligned, with filled in negative space
+def print_tri_num_left_a(n):
+	for i in range(n):
+		padding = n - i
+		num_nodes = i + 1
+		row = ("* " * num_nodes) + ("` " * padding)
+		print(row)
+
+	print("\nTriangular number", n, "is", str(int(nth_tri_num(n))) + ".\n")
+
+# prints out visual of triangular number, right-aligned, with filled in negative space
+def print_tri_num_right_a(n):
+	for i in range(n):
+		padding = n - i
+		num_nodes = i + 1
+		row = ("` " * padding) + ("* " * num_nodes)
+		print(row)
+
+	print("\nTriangular number", n, "is", str(int(nth_tri_num(n))) + ".\n")
+
+print_tri_num_right_a(6)
+print_tri_num_centered(6)
 
